@@ -17,7 +17,8 @@ WHERE aid IN (SELECT aid
               FROM orders
               WHERE cid IN (SELECT cid
        			    FROM customers
-       			    WHERE city = 'Dallas'));
+       			    WHERE city = 'Dallas'))
+ORDER BY pid DESC;
 
 -- 3. Get the ids and names of customers who did not place an order through agent a01.
 
@@ -30,29 +31,40 @@ WHERE cid NOT IN (SELECT cid
 -- 4. Get the ids of customers who ordered both product p01 and p07.
 
 SELECT cid
-FROM orders
-WHERE pid IN (SELECT pid
-       FROM products
-       WHERE pid = 'p01' AND pid = 'p07');
+FROM customers
+WHERE cid IN (SELECT cid
+      	      FROM orders
+      	      WHERE pid IN ('p01') AND cid IN (SELECT cid
+      	      				       FROM orders
+      	    				       WHERE pid IN ('p07');
 
 -- 5. Get the ids of products not ordered by any customers who placed any order through agent
 -- a07 in pid order from highest to lowest.
 
-SELECT 
-FROM 
-WHERE
+SELECT pid
+FROM orders
+WHERE cid NOT IN (SELECT cid
+	          FROM orders
+	          WHERE aid IN ('a07'));
+ORDER BY pid DESC;
 
--- 6. Get the name, discounts, and city for all customers who place orders through agent a07
--- in pid order from highest to lowest.
+-- 6. Get the name, discounts, and city for all customers who place orders through agents in
+-- London or New York.
 
-SELECT 
-FROM 
-WHERE
+SELECT name, discount, city
+FROM customers
+WHERE cid IN (SELECT cid
+	      FROM orders
+	      WHERE aid IN (SELECT aid
+		            FROM agents
+		            WHERE city IN ('London', 'New York')));
 
 -- 7. Get all customers who have the same discount as that of any customers in Dallas or London.
 
-SELECT 
-FROM 
-WHERE
+SELECT cid
+FROM customers
+WHERE discount IN (SELECT discount
+	           FROM customers
+	           WHERE city IN ('Dallas', 'London');
 
 -- 8. ESSAY ON CHECK CONSTRAINTS
