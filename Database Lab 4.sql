@@ -67,4 +67,9 @@ WHERE discount IN (SELECT discount
 	           FROM customers
 	           WHERE city IN ('Dallas', 'London');
 
--- 8. ESSAY ON CHECK CONSTRAINTS
+-- 8. Check constraints are limitations put into the database to specify only certain entries that 
+-- can be entered into the database. These are good for making sure there is consistency within
+-- the database when checking for a matching value within an entity. A good example of a check constraint
+-- would be the use of gender. Limiting the entries to only male or female is a valid and realistic
+-- restriction for a database. A bad example of a check constraint would be names. Limiting the entries
+-- to a few names is unrealistic, for it is highly unlikely for people to share the same name. 
