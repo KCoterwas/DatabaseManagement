@@ -1,0 +1,27 @@
+10 pts
+
+1. 
+
+Evidence looks ok.
+
+Good organization of screenshots.
+
+
+2.
+
+Excellent knowledge of the terms primary key, candidate key, and superkey.
+
+
+3.
+
+You did not discuss what fields were -nullable-.
+
+
+4.
+
+There are some typos in the responses. E.g., ``...meaning he information ...''.
+
+The ``all rows must be unique'' explanation is right, but the example is wrong. Careful.
+
+
+- Dr. Rivas
