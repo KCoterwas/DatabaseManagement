@@ -5,7 +5,13 @@
 --    different kinds of products. (There are two cities that make the most different
 --    products. Return the name and city of customers from either one of those.)
 
-
+SELECT name, city
+FROM customers 
+WHERE city IN (SELECT city
+               FROM products
+               GROUP BY city
+               ORDER BY count(pid) DESC
+               LIMIT 1);
 
 -- 2. Display the names of products whose priceUSD is strictly above the average 
 --    priceUSD, in reverse-alphabetical order.
