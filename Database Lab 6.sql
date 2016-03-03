@@ -65,3 +65,19 @@ WHERE dollars != truedollars
 -- 7. What is the difference between a LEFT OUTER JOIN and a RIGHT OUTER JOIN? Give 
 --    example queries in SQL to demonstrate. (Feel free to use the CAP2 database to 
 --    make your points here.)
+
+-- The difference between a LEFT OUTER JOIN and a RIGHT OUTER JOIN is in the result
+-- of the query. In a LEFT OUTER JOIN, the data specified on the left side of the 
+-- equals sign is shown. For example:
+SELECT *
+FROM agents a 
+LEFT OUTER JOIN orders o ON a.aid = o.aid
+-- This returns all orders made by all agents, including the single agent that had 
+-- not placed any orders. In place of where the information would be about the orders
+-- are NULL values. On the other hand, this is an example of RIGHT OUTER JOIN,
+SELECT *
+FROM agents a 
+RIGHT OUTER JOIN orders o ON a.aid = o.aid
+-- This is very similar to the LEFT OUTER JOIN except the agent that had not placed
+-- any orders is not shown, for only the direct join from orders to agents is
+-- specified.
