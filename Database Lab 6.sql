@@ -27,13 +27,22 @@ ORDER BY o.dollars DESC;
 -- 4. Display all customer names (in alphabetical order) and their total ordered, 
 --    and nothing more. Use coalesce to avoid showing NULLs.
 
-
+SELECT c.name, coalesce (sum(o.dollars), 0) AS dollars
+FROM orders o
+RIGHT OUTER JOIN customers c ON c.cid = o.cid
+GROUP BY c.name
+ORDER BY c.name ASC;
 
 -- 5. Display the names of all customers who bought products from agents based in 
 --    Tokyo along with the names of the products they ordered, and the names of the 
 --    agents who sold it to them.
 
-
+SELECT c.name, a.name, p.name
+FROM orders o
+INNER JOIN customers c ON o.cid = c.cid
+INNER JOIN agents a ON o.aid = a.aid
+INNER JOIN products p ON o.pid = p.pid 
+WHERE a.city = 'Tokyo';
 
 -- 6. Write a query to check the accuracy of the dollars column in the Orders table.
 --    This means calculating Orders.dollars from data in other tables and comparing 
