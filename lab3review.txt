@@ -1,0 +1,86 @@
+5 pts
+
+Correct output for some queries
+Mostly correct SQL statements
+SQL statements are somewhat readable
+
+
+1. List the ordno and dollars of all orders.
+
+Incorrect SQL statement
+- It seems like you have the wrong field names.
+
+SQL statement is readable
+
+
+2. List the name and city of agents named Smith.
+
+Incorrect output
+- You are giving all agents, which is incorrect
+SQL statement is readable
+
+
+3. List the pid, name, and priceUSD of products with quantity more than
+208,000.
+
+Incorrect output
+- You are giving an additional field, quantity, but you were not asked for it.
+Correct SQL statement
+SQL statement is readable
+
+
+4. List the names and cities of customers in Dallas.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+5. List the names of agents not in New York and not in Tokyo.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+6. List all data for products not in Dallas or Duluth that cost US$1 or more.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+7. List all data for orders in January or March.
+
+Correct output
+Correct SQL statement
+SQL statement is readable
+
+
+8. List all data for orders in February less than US$500.
+
+Incorrect SQL statement
+- It seems like you have the wrong field names.
+SQL statement is readable
+
+
+9. List all orders from the customer whose cid is C005.
+
+Incorrect output
+- You are nor listing the orders, but customer info!
+Correct SQL statement
+SQL statement is readable
+
+
+In general: 
+
+- Test all your SQL statements.
+
+- Make sure you read all the instructions for queries really well.
+
+- You submitted queries compatible with the other group's database, with Alan's
+  section. So, I am going to investigate this further. If I determine you are
+  cheating, you will receive a failing grade in this assignment.
+
+
+- Dr. Rivas
