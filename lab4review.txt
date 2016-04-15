@@ -1,0 +1,49 @@
+7 pts
+
+Correct queries
+Correct output for some queries
+Mostly correct SQL statements
+SQL statements are somewhat readable
+
+
+4. Get the ids of customers who ordered both product p01 and p07.
+
+Incorrect SQL statement
+- Two missing parenthesis. Not a runnable query.
+
+
+5. Get the ids of products not ordered by any customers who placed any order
+through agent a07 in pid order from highest to lowest.
+
+Incorrect SQL statement
+- There was an additional semicolon. Not a runnable query.
+
+
+
+7. Get all customers who have the same discount as that of any customers in
+Dallas or London
+
+Incorrect SQL statement
+- You are missing a parenthesis
+
+
+8. Tell me about check constraints: What are they? What are they good for? What
+is the advantage of putting that sort of thing inside the database? Make up
+some examples of good uses of check constraints and some examples of bad uses
+of check constraints. Explain the differences in your examples and argue your
+case.
+
+- You did not include -actual- check constraints examples, just descriptions of
+  them. 
+
+
+In general: 
+
+- Please do not use tabs for indentation. Use spaces instead.
+
+- Test all your SQL statements.
+
+- Make sure your name is somewhere in the .sql file.
+
+
+- Dr. Rivas
